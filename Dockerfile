@@ -1,6 +1,5 @@
 FROM gradle:8-jdk17 AS build
 WORKDIR /app
-COPY .git .git
 COPY gradle gradle
 COPY gradlew build.gradle.kts settings.gradle.kts gradle.properties ./
 COPY LavalinkServer LavalinkServer
