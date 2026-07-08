@@ -54,12 +54,12 @@ class GitRepoState {
         commitMessageShort = properties.getOrDefault("git.commit.message.short", "").toString()
 
         val time = properties["git.commit.time"].toString()
-        commitTime = if (time == "null") {
-            0
-        } else {
+        commitTime = try {
             // https://github.com/n0mer/gradle-git-properties/issues/71
             val dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssZ")
             OffsetDateTime.from(dtf.parse(time)).toEpochSecond()
+        } catch (e: Exception) {
+            0
         }
     }
 }
