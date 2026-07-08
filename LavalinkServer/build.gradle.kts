@@ -19,6 +19,10 @@ apply(plugin = "com.adarshr.test-logger")
 apply(plugin = "kotlin")
 apply(plugin = "kotlin-spring")
 
+gitProperties {
+    failOnNoGitDirectory = false
+}
+
 val archivesBaseName = "Lavalink"
 group = "dev.arbjerg.lavalink"
 description = "Play audio to discord voice channels"
