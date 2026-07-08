@@ -1,6 +1,9 @@
 services:
   - type: web
     name: lavalink
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: LAVALINK_SERVER_PASSWORD
         sync: false
