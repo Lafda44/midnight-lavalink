@@ -5,7 +5,7 @@ COPY gradlew build.gradle.kts settings.gradle.kts gradle.properties ./
 COPY LavalinkServer LavalinkServer
 COPY protocol protocol
 COPY plugin-api plugin-api
-RUN gradle :Lavalink-Server:bootJar --no-daemon
+RUN git init && git add -A && git commit -m "build" --allow-empty --no-gpg-sign 2>/dev/null; gradle :Lavalink-Server:bootJar --no-daemon
 
 FROM eclipse-temurin:17-jre-jammy
 RUN groupadd -g 322 lavalink && \
