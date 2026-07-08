@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: lavalink
+    runtime: image
+    repo: https://github.com/lavalink-devs/Lavalink
+    plan: free
+    envVars:
+      - key: LAVALINK_SERVER_PASSWORD
+        sync: false
+      - key: JAVA_TOOL_OPTIONS
+        value: -Xmx512m
+      - key: PORT
+        value: 2333
