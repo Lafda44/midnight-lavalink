@@ -1,0 +1,10 @@
+server:
+  port: 2333
+lavalink:
+  server:
+    password: "Lawda@2969"
+    sources:
+      youtube: false
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-source:1.11.1"
+      repository: "https://maven.lavalink.dev/releases"
