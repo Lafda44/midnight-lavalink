@@ -5,6 +5,3 @@ lavalink:
     password: "Lawda@2969"
     sources:
       youtube: false
-  plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
-      repository: "https://maven.lavalink.dev/releases"
